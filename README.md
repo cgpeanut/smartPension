@@ -3,16 +3,7 @@
 # README.pdf for more detailed Step by Step with graphics.
 
 ```
-Section #1: Setup Notes for Load Balancer and HTTP. requirements 1 & 2
-
-1. Please run the playbook "gen_ssh_key.yaml" , "ansible-playbook ansible_templates/gen_ssh_key.yaml" 
-   to generate SSH keypair(on local system) used in TF templates and Ansible for connecting to 
-   remote EC2 instances.
-
-2. If you still want to initialize directory via "terraform init", then use the "-backend=false" flag,
-   like so "terraform init -backend=false"
-
-Section #2: Setup Notes for a terrafrom persistent backend with a control node. requirement 3 
+Section #1: Setup Notes for a terrafrom persistent backend with a control node. requirement 3 
 
 1. please create a Amazon Linux 2 VM as your Terraform control node. 
 
@@ -64,3 +55,12 @@ terraform {
     bucket  = "smartpensionpersistantbucket1005"
   }
 }
+
+Section #2: Setup Notes for Load Balancer and HTTP. requirements 1 & 2
+
+1. Please run the playbook "gen_ssh_key.yaml" , "ansible-playbook ansible_templates/gen_ssh_key.yaml"
+   to generate SSH keypair(on local system) used in TF templates and Ansible for connecting to
+   remote EC2 instances.
+
+2. If you still want to initialize directory via "terraform init", then use the "-backend=false" flag,
+   like so "terraform init -backend=false"
