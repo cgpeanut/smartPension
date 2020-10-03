@@ -9,8 +9,6 @@ Section #1: Setup Notes for a terrafrom persistent backend with a control node. 
 
 2. Configure your Amazon Linuz 22 VM Terraform control node VM by executing the following commands.
 
-	• Install git version control, and other goodies. 
-
 	# sudo yum -y install epel-release
 	# sudo yum -y install wget unzip vim git -y
 	# git --version
