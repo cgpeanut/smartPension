@@ -1,5 +1,6 @@
 # Setup notes
 # smartPension Interview Tasks
+# Refer to README.pdf doc for more detailed Step by Step with graphics.
 
 ```
 1. please create a Amazon Linux 2 VM as your control node. 
