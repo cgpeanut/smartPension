@@ -33,7 +33,7 @@ Section #1: Setup Notes for a terrafrom persistent backend with a control node. 
 	# aws --version 
 	# ansible --version
 
-4. Configure your AWS CLI using you (free) account credentials details in the READ.pdf file
+4. Configure your AWS CLI using with your free account credentials, refer to the READ.pdf file for more details.
 
 5. Create a Persisting Terraform State in S3 backend using AWS CLI (requirement #3).
 	
