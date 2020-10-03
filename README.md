@@ -1,18 +1,19 @@
 # Setup notes
+# smartPension Interview Tasks
 
 ```
-1. Please run the playbook "gen_ssh_key.yaml" , "ansible-playbook ansible_templates/gen_ssh_key.yaml" 
-   to generate SSH keypair(on local system) used in TF templates and Ansible for connecting to 
-   remote EC2 instances.
-   
-2. If you still want to initialize directory via "terraform init", then use the "-backend=false" flag,
-   like so "terraform init -backend=false"
-```
+1. please create a Amazon Linux 2 VM as your control node. 
 
-## GENERAL NOTE:
+ID_LIKE="centos rhel fedora"
+CPE_NAME="cpe:2.3:o:amazon:amazon_linux:2"
 
-```
-The templates in this folder are meant to be used in the ACG Hands-on lab, however it should 
-work in any AWS account, given that the above 3 conditions are met. However this has not been tested
-extensively and author gives no guarantees for it.
-```
+2. Step 2: Configure the Terraform control node VM by executing the following commands.
+
+	• Install git version control, and other goodies. 
+	
+	# sudo yum -y install epel-release
+	# sudo yum -y install wget unzip vim git -y
+
+	• Validate the proper installation of git. If no error output is produced then,  git is properly installed.
+	
+	# git --version
