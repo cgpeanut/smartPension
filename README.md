@@ -33,8 +33,8 @@ Section #1: Setup Notes for a terrafrom persistent backend with a control node. 
 
 4. Configure AWS CLI s3 backend to store terraform statefiles, refer to the README.pdf file for more details.
 
-5. Create a Persisting Terraform State in S3 backend using AWS CLI (requirement #3).
-	
+5. Create a persistence backend using AWS s3 bucket using AWS CLI for Terrafrom statefiles (requirement #3).
+
 	# cd $HOME/code/smartPension
 	# aws configure (input your credentials)
 	# aws s3api create-bucket --bucket smartpensionpersistantbucket1005
