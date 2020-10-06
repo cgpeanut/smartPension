@@ -45,5 +45,5 @@ resource "aws_lb_target_group_attachment" "jenkins-master-attach" {
   provider         = aws.region-master
   target_group_arn = aws_lb_target_group.smartpension-lb-tg.arn
   target_id        = aws_instance.jenkins-master.id
-  port             = 8080
+  port             = 80
 }
