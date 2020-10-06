@@ -10,6 +10,6 @@ terraform {
     region  = "us-east-1"
     profile = "default"
     key     = "terraformstatefile"
-    bucket  = "cgpeanuts3bucket117"
+    bucket  = "smartpensionpersistantbucket1005"
   }
 }
