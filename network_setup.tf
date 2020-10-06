@@ -162,7 +162,6 @@ resource "aws_route_table_association" "internet_association_oregon" {
 
 
 #Create SG for allowing TCP/8080 from * and TCP/22 from your IP in us-east-1
-#Create SG for allowing TCP/80 from * and TCP/22 from your IP in us-east-1
 resource "aws_security_group" "jenkins-sg" {
   provider    = aws.region-master
   name        = "jenkins-sg"
@@ -177,8 +176,8 @@ resource "aws_security_group" "jenkins-sg" {
   }
   ingress {
     description = "allow anyone on port 8080"
-    from_port   = 80
-    to_port     = 80
+    from_port   = 8080
+    to_port     = 8080
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
