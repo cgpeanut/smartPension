@@ -6,22 +6,22 @@ resource "aws_lb" "application-lb" {
   security_groups    = [aws_security_group.lb-sg.id]
   subnets            = [aws_subnet.subnet_1.id, aws_subnet.subnet_2.id]
   tags = {
-    Name = "Jenkins-LB"
+    Name = "smartPension-Jenkins-LB"
   }
 }
 
 resource "aws_lb_target_group" "smartPension-lb-tg" {
   provider    = aws.region-master
   name        = "smartPension-lb-tg"
-  port        = "80"
+  port        = 8080
   target_type = "instance"
   vpc_id      = aws_vpc.vpc_useast.id
   protocol    = "HTTP"
   health_check {
     enabled  = true
     interval = 10
-    path     = "/"
-    port     = "80"
+    path     = "/login"
+    port     = 8080
     protocol = "HTTP"
     matcher  = "200-299"
   }
@@ -45,5 +45,5 @@ resource "aws_lb_target_group_attachment" "jenkins-master-attach" {
   provider         = aws.region-master
   target_group_arn = aws_lb_target_group.smartPension-lb-tg.arn
   target_id        = aws_instance.jenkins-master.id
-  port             = 80
+  port             = 8080
 }
