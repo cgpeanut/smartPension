@@ -1,5 +1,4 @@
 # Setup notes
-# smartPension Interview Tasks
 # README.pdf for more detailed Step by Step with graphics.
 
 ```
